@@ -1,0 +1,250 @@
+.create-room-container {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0b0c10, #1e3a8a);
+  padding-top: 3rem;
+  text-align: center;
+}
+
+/* Fixed Back Button for CreateRoom Page */
+.back-button-createroom-fixed {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: linear-gradient(135deg, #133d89, #007bff);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(19, 61, 137, 0.3);
+  z-index: 100000;
+  font-family: "Poppins", sans-serif;
+  height: 50px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  pointer-events: auto;
+}
+
+.back-button-createroom-fixed:hover {
+  background: linear-gradient(135deg, #0056b3, #004494);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(19, 61, 137, 0.4);
+}
+
+/* Profile Section for CreateRoom Page */
+.profile-section-createroom {
+  position: relative;
+}
+
+.navbar-right-createroom {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  border: 2px solid #133d89;
+  padding: 14px 16px 14px 8px;
+  border-radius: 25px;
+  background-color: #0b0c10;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  z-index: 100000;
+  box-shadow: 0 4px 12px rgba(19, 61, 137, 0.3);
+  height: 54px;
+  width: 120px;
+}
+
+.profile-icon {
+  font-size: 1rem;
+}
+
+.navbar-right-createroom:hover {
+  background: #133d89;
+  color: #ffffff;
+}
+
+.navbar-dropdown-createroom {
+  position: absolute;
+  top: 120%;
+  font-family: "Poppins", sans-serif;
+  right: 0;
+  background-color: #1e1e2f;
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out;
+  z-index: 100001;
+  min-width: 160px;
+}
+
+.navbar-dropdown-createroom.show {
+  transform: scaleY(1);
+}
+
+.navbar-dropdown-createroom button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 15px 20px;
+  text-align: left;
+  width: 100%;
+  transition: background 0.3s, padding-left 0.3s;
+}
+
+.navbar-dropdown-createroom button:hover {
+  background-color: #133d89;
+  padding-left: 30px;
+}
+
+.decorative-curve {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, #1e3a8a, #0b0c10);
+  z-index: 1;
+  clip-path: ellipse(75% 100% at 50% 0%);
+}
+
+.create-room-content {
+  position: relative;
+  z-index: 2;
+}
+
+.back-button-create {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: linear-gradient(135deg, #133d89, #007bff);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(19, 61, 137, 0.3);
+  z-index: 3;
+}
+
+.back-button-create:hover {
+  background: linear-gradient(135deg, #0056b3, #004494);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(19, 61, 137, 0.4);
+}
+
+.room-avatar {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #133d89, #007bff);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  margin: 0 auto;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.contact-header {
+  margin-bottom: 2rem;
+}
+
+.contact-logo {
+  font-size: 6rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Card */
+.create-room {
+  max-width: 400px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+
+.modal-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  margin-bottom: 1rem;
+  outline: none;
+  font-size: 1rem;
+}
+
+.modal-input::placeholder {
+  color: #ddd;
+}
+
+/* Gradient Button */
+.gradient-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  font-weight: bold;
+  background: linear-gradient(90deg, #133d89, #0056b3);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.gradient-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #0056b3, #133d89);
+}
+
+.error-message {
+  color: #ef4444;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-logo {
+    font-size: 5rem;
+  }
+}

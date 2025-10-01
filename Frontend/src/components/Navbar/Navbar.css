@@ -1,0 +1,118 @@
+/* Importing Google Fonts and Icons */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+/* Navbar Styles */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-spacing {
+  height: 70px; /* Space for fixed navbar */
+}
+
+.navbar-left {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-left: 2%;
+}
+
+.navbar-right {
+  position: relative;
+  cursor: pointer;
+  border: 2px solid #133d89;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  background-color: #0b0c10;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-right:hover {
+  background: #133d89;
+  color: #ffffff;
+}
+
+/* Adding Icon */
+.navbar-right i {
+  font-size: 1.2rem;
+}
+
+/* Dropdown Menu */
+.navbar-dropdown {
+  position: absolute;
+  top: 120%;
+  font-family: "Poppins", sans-serif;
+  right: 0;
+  background-color: #1e1e2f;
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.navbar-dropdown.show {
+  transform: scaleY(1);
+}
+
+.navbar-dropdown button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 15px 20px;
+  text-align: left;
+  width: 100%;
+  transition: background 0.3s, padding-left 0.3s;
+}
+
+.navbar-dropdown button:hover {
+  background-color: #133d89;
+  padding-left: 30px;
+}
+
+/* Smooth Transitions */
+.navbar-container {
+  transition: top 0.4s ease-in-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar-left {
+    font-size: 1rem;
+  }
+
+  .navbar-right {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .navbar-dropdown button {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+}

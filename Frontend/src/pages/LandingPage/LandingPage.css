@@ -1,0 +1,293 @@
+/* General Landing Page Styles */
+.landing-page {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  perspective: 1000px;
+  background: linear-gradient(135deg, #0b0c10 0%, #1e3a8a 50%, #133d89 100%);
+}
+
+.landing-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(19, 61, 137, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 123, 255, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 30%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Professional Background */
+.background-professional {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -2;
+  transition: filter 0.5s ease;
+}
+
+.background-professional::before {
+  display: none;
+}
+
+@keyframes gradientMove {
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1.1) rotate(2deg);
+  }
+}
+
+.background-professional.blurred {
+  filter: blur(5px);
+}
+
+/* Background Overlay with Blue Gradient */
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(19, 61, 137, 0.2), rgba(0, 123, 255, 0.1));
+  mix-blend-mode: overlay;
+  animation: none;
+  z-index: -1;
+}
+
+/* Animated Elements */
+.animated-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(19, 61, 137, 0.3), rgba(0, 123, 255, 0.2));
+  backdrop-filter: blur(5px);
+  animation: floatOrb 10s ease-in-out infinite;
+}
+
+.orb-1 {
+  width: 150px;
+  height: 150px;
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  width: 200px;
+  height: 200px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+/* Hide all animated elements for cleaner look */
+.animated-elements,
+.floating-orb,
+.particle {
+  display: none !important;
+}
+
+@keyframes floatOrb {
+
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+}
+
+/* Particle animation removed for less distraction */
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Overlay Container */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+/* Enhanced Brand Name - Blue/White Only */
+.brand-name {
+  font-size: 4.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, #ffffff, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+}
+
+/* Simple Brand Name - Clean White Text */
+.brand-name-simple {
+  font-size: 5rem;
+  color: #ffffff;
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 40px;
+  background: none;
+  -webkit-text-fill-color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+/* Fixed Buttons Container to Reserve Vertical Space */
+.buttons-container {
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Enhanced Explore, Login, and Signup Buttons */
+.explore-button {
+  padding: 16px 32px;
+  font-size: 1.3rem;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin: 10px;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  position: relative;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.login-button,
+.signup-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin: 8px;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  position: relative;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.explore-button::before,
+.login-button::before,
+.signup-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(19, 61, 137, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.explore-button:hover::before,
+.login-button:hover::before,
+.signup-button:hover::before {
+  left: 100%;
+}
+
+.explore-button:hover,
+.login-button:hover,
+.signup-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Group for Login & Signup */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+  .brand-name {
+    font-size: 3rem;
+  }
+
+  .explore-button,
+  .login-button,
+  .signup-button {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .floating-orb {
+    display: none;
+  }
+
+  .particle {
+    width: 3px;
+    height: 3px;
+  }
+
+  .overlay {
+    padding: 15px;
+  }
+}

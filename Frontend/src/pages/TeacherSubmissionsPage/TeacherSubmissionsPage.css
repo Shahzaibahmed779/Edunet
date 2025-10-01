@@ -1,0 +1,94 @@
+/* Container */
+.teacher-submissions-page {
+  position: relative;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #0b0c10, #1e3a8a);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.back-button-submissions {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: linear-gradient(135deg, #133d89, #007bff);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(19, 61, 137, 0.3);
+  z-index: 10;
+}
+
+.back-button-submissions:hover {
+  background: linear-gradient(135deg, #0056b3, #004494);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(19, 61, 137, 0.4);
+}
+
+/* Assignments Container */
+.assignments-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Assignment Card */
+.assignment-card {
+  background-color: #e3f2fd;
+  /* Light blue */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.assignment-card h3 {
+  margin: 0;
+  color: #007bff;
+}
+
+.assignment-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.assignment-card h4 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Submissions List */
+.submissions-list {
+  list-style: none;
+  padding: 0;
+}
+
+.submission-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.submission-item p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.submission-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.submission-item a:hover {
+  text-decoration: underline;
+}

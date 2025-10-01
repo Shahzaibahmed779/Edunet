@@ -1,0 +1,95 @@
+# ---------------------------------------------------------------------------
+# Project-wide Git ignore file (Frontend + Backend)
+# ---------------------------------------------------------------------------
+
+# Dependency directories
+node_modules/
+**/node_modules/
+
+# Package manager logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variable files (keep examples tracked)
+.env
+**/.env
+.env.*
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Build / output directories
+Frontend/dist/
+Frontend/dist-ssr/
+Frontend/build/
+Backend/dist/
+Backend/build/
+dist/
+**/dist/
+dist-ssr/
+**/dist-ssr/
+build/
+**/build/
+
+# Runtime data / caches
+coverage/
+*.lcov
+.nyc_output/
+.cache/
+.parcel-cache/
+pids
+*.pid
+*.pid.lock
+*.seed
+*.tsbuildinfo
+.npm/
+.eslintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Uploads & generated media
+uploads/
+Backend/uploads/
+*.webm
+*.mp4
+*.zip
+*.7z
+*.iso
+
+# IDE / editor files
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary directories
+.tmp/
+tmp/
+temp/
+
+# Miscellaneous
+logs/
+*.log
+*.tgz
+.node_repl_history
+*.bak
+
+# Local test artefacts
+test-upload.html
+
+# Generated frontend entry assets
+Frontend/dist/**

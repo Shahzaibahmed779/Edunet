@@ -1,0 +1,106 @@
+/* Container for Private Rooms */
+.private-rooms {
+  width: 100%;
+  background-color: var(--bs-light);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.private-rooms-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--bs-dark);
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 70%;
+  padding: 10px 15px;
+  border: 1px solid var(--bs-gray);
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--bs-primary);
+  box-shadow: 0 2px 5px rgba(0, 156, 255, 0.5);
+}
+
+.btn-search {
+  background-color: var(--bs-primary);
+  color: var(--bs-white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-search:hover {
+  background-color: darken(var(--bs-primary), 10%);
+  transform: scale(1.05);
+}
+
+/* Room List */
+.room-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.room-item {
+  text-align: center;
+}
+
+.room-link {
+  display: block;
+  padding: 10px;
+  background-color: var(--bs-light);
+  border: 1px solid var(--bs-gray);
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--bs-dark);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.room-link:hover {
+  background-color: var(--bs-primary);
+  color: var(--bs-white);
+  transform: scale(1.05);
+}
+
+/* Create Room Button */
+.btn-create-room {
+  margin-top: 20px;
+  background-color: var(--bs-success);
+  color: var(--bs-white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-create-room:hover {
+  background-color: darken(var(--bs-success), 10%);
+  transform: scale(1.05);
+}
